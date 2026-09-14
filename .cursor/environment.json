@@ -1,0 +1,5 @@
+{
+  "name": "OCI-setup",
+  "install": "bash scripts/install.sh",
+  "start": "bash scripts/oci-configure.sh"
+}

@@ -1,0 +1,9 @@
+# Never commit OCI credentials or keys
+.oci/
+*.pem
+*.key
+*.ppk
+
+# Local env files
+.env
+.env.*
