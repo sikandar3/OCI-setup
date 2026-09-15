@@ -1,0 +1,38 @@
+tenancy_ocid = "ocid1.tenancy.oc21..example"
+user_ocid    = "ocid1.user.oc21..example"
+fingerprint  = "https://example.net/id/kindle:https://example.net/id/kindle"
+
+# Supply region with TF_VAR_region from OCI_CLI_REGION. Do not hardcode the live region here.
+
+# PEM contents from OCI_CLI_KEY_CONTENT. Prefer TF_VAR_private_key instead of this file.
+# private_key = ""
+
+parent_compartment_id        = "ocid1.compartment.oc21..aaaaaaaaomwl34fblu32wcekxo5pakdqayzff5o7stge4fo2uhwusymfdp5a"
+environment_compartment_name = "cmp-ag-op-test-mckensey"
+name_prefix                  = "ag-op-test-mckensey"
+
+# Distinct from source VCN 10.129.101.0/25 so both can exist in the same tenancy.
+vcn_cidr      = "10.129.102.0/25"
+vcn_dns_label = "vcnagtmck"
+
+kubernetes_version = "v1.36.1"
+node_pool_size     = 2
+node_shape         = "VM.Standard.E5.Flex"
+node_ocpus         = 4
+node_memory_in_gbs = 24
+
+# Set only if image auto-selection fails.
+# node_image_id = "ocid1.image.oc21...."
+
+manage_group_name = "grp-agentic-dev-manage"
+
+# Keep false unless you have a non-overlapping CIDR approved for the hub DRG.
+attach_to_existing_drg = false
+# existing_drg_id      = "ocid1.drg.oc21...."
+
+# create_vault_secrets = true
+# vault_secret_values = {
+#   LINKUP_API_KEY       = "..."
+#   AZURE_OPENAI_API_KEY = "..."
+#   AZURE_DOC_INTEL_KEY  = "..."
+# }
